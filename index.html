@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemilihan IPEMSI Baru 2026 | Ketua, Sekretaris, Bendahara</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-radius: 0 !important;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #eef2f7;
+            background-image: 
+                linear-gradient(rgba(30, 58, 138, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 58, 138, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #1e293b;
+            perspective: 1200px;
+        }
+
+        .main-container {
+            max-width: 1300px;
+            width: 100%;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding: 1.8rem 1rem;
+            background: #0b2b5c;
+            border: 4px solid #0b2b5c;
+            box-shadow: 8px 8px 0 #60a5fa;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(96, 165, 250, 0.15) 50%,
+                transparent 70%
+            );
+            animation: headerShine 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes headerShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 0 #60a5fa;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 i {
+            color: #60a5fa;
+            font-size: 2.2rem;
+        }
+
+        .header .sub {
+            font-size: 1rem;
+            color: #cbd5e1;
+            margin-top: 12px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* STEPS BOX */
+        .steps-box {
+            background: #ffffff;
+            border: 3px solid #0b2b5c;
+            box-shadow: 6px 6px 0 #f59e0b;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+            animation: slideDown 0.5s ease-out;
+            position: relative;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .steps-label {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            border-right: 3px solid #0b2b5c;
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-shrink: 0;
+            min-width: 130px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .steps-label::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            animation: labelShine 2.5s ease-in-out infinite;
+        }
+
+        @keyframes labelShine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+
+        .steps-label i {
+            color: #0b2b5c;
+            font-size: 1.1rem;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .steps-label span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #0b2b5c;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .steps-list {
+            display: flex;
+            align-items: stretch;
+            flex: 1;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        .steps-list::-webkit-scrollbar { height: 4px; }
+        .steps-list::-webkit-scrollbar-track { background: #e2e8f0; }
+        .steps-list::-webkit-scrollbar-thumb { background: #f59e0b; }
+
+        .step-mini {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.5rem 0.9rem;
+            border-right: 2px dashed #cbd5e1;
+            flex: 1;
+            min-width: 0;
+            transition: all 0.4s ease;
+            position: relative;
+            background: #ffffff;
+            animation: stepAttention 10s ease-in-out infinite;
+            animation-delay: var(--step-delay, 0s);
+        }
+
+        .step-mini:last-child { border-right: none; }
+
+        @keyframes stepAttention {
+            0%, 2% {
+                background: #fef3c7;
+                transform: scale(1.05);
+                box-shadow: inset 0 0 0 3px #f59e0b, 0 0 20px rgba(245, 158, 11, 0.5);
+                z-index: 5;
+            }
+            18%, 22% {
+                background: #fef3c7;
+                transform: scale(1.05);
+                box-shadow: inset 0 0 0 3px #f59e0b, 0 0 20px rgba(245, 158, 11, 0.5);
+                z-index: 5;
+            }
+            30%, 100% {
+                background: #ffffff;
+                transform: scale(1);
+                box-shadow: none;
+                z-index: 1;
+            }
+        }
+
+        .step-mini[data-step="1"] { animation-delay: 0s; }
+        .step-mini[data-step="2"] { animation-delay: 2s; }
+        .step-mini[data-step="3"] { animation-delay: 4s; }
+        .step-mini[data-step="4"] { animation-delay: 6s; }
+        .step-mini[data-step="5"] { animation-delay: 8s; }
+
+        .step-mini[data-step="1"] .num { background: #2563eb; border-color: #60a5fa; }
+        .step-mini[data-step="2"] .num { background: #7c3aed; border-color: #c4b5fd; }
+        .step-mini[data-step="3"] .num { background: #db2777; border-color: #f9a8d4; }
+        .step-mini[data-step="4"] .num { background: #10b981; border-color: #6ee7b7; }
+        .step-mini[data-step="5"] .num { background: #25D366; border-color: #86efac; }
+
+        .step-mini[data-step="1"] .txt strong { color: #2563eb; }
+        .step-mini[data-step="2"] .txt strong { color: #7c3aed; }
+        .step-mini[data-step="3"] .txt strong { color: #db2777; }
+        .step-mini[data-step="4"] .txt strong { color: #10b981; }
+        .step-mini[data-step="5"] .txt strong { color: #128C7E; }
+
+        .step-mini.whatsapp-step {
+            background: linear-gradient(135deg, #dcfce7 0%, #ffffff 100%);
+        }
+
+        .step-mini:hover {
+            background: #fffbeb;
+            transform: scale(1.05);
+            box-shadow: inset 0 0 0 3px #f59e0b;
+            z-index: 10;
+        }
+
+        .step-mini .num {
+            width: 26px;
+            height: 26px;
+            background: #0b2b5c;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #f59e0b;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .step-mini .num::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border: 2px solid currentColor;
+            opacity: 0;
+            animation: numPulse 2s ease-in-out infinite;
+            animation-delay: var(--step-delay, 0s);
+        }
+
+        @keyframes numPulse {
+            0%, 100% { opacity: 0; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.15); }
+        }
+
+        .step-mini .txt {
+            font-size: 0.72rem;
+            color: #1e293b;
+            font-weight: 600;
+            line-height: 1.25;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .step-mini .txt strong { color: #0b2b5c; font-weight: 800; }
+
+        .step-mini .txt::before {
+            content: '▸';
+            color: #f59e0b;
+            font-weight: 900;
+            margin-right: 4px;
+            display: inline-block;
+            animation: arrowMove 1s ease-in-out infinite;
+            animation-delay: var(--step-delay, 0s);
+        }
+
+        @keyframes arrowMove {
+            0%, 100% { transform: translateX(0); opacity: 1; }
+            50% { transform: translateX(3px); opacity: 0.6; }
+        }
+
+        .step-mini:not(:last-child)::after {
+            content: '›';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f59e0b;
+            font-size: 1.1rem;
+            font-weight: 900;
+            background: #ffffff;
+            z-index: 2;
+            line-height: 1;
+            padding: 0 2px;
+        }
+
+        @media (max-width: 700px) {
+            .steps-box { flex-direction: column; }
+            .steps-label { border-right: none; border-bottom: 3px solid #0b2b5c; min-width: auto; }
+            .steps-list { overflow-x: auto; }
+            .step-mini { flex: 0 0 auto; min-width: 140px; }
+        }
+
+        /* INFO WA */
+        .wa-info-box {
+            background: #dcfce7;
+            border: 3px solid #128C7E;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1.2rem;
+            box-shadow: 4px 4px 0 #128C7E;
+            flex-wrap: wrap;
+        }
+
+        .wa-info-box > i {
+            color: #25D366;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .wa-info-box .wa-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+        }
+
+        .wa-info-box .wa-title {
+            font-size: 0.8rem;
+            color: #065f46;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .wa-info-box .wa-numbers {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .wa-info-box .wa-number {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffffff;
+            border: 2px solid #128C7E;
+            padding: 4px 10px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #0b2b5c;
+        }
+
+        .wa-info-box .wa-number i {
+            color: #25D366;
+            font-size: 0.85rem;
+        }
+
+        /* COUNTER BOX */
+        .counter-box {
+            background: #dbeafe;
+            border: 3px solid #2563eb;
+            padding: 0.7rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            box-shadow: 4px 4px 0 #2563eb;
+            flex-wrap: wrap;
+        }
+
+        .counter-box .counter-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .counter-box i {
+            color: #2563eb;
+            font-size: 1.3rem;
+        }
+
+        .counter-box .counter-text {
+            font-size: 0.85rem;
+            color: #1e3a8a;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .counter-box .counter-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            background: #2563eb;
+            padding: 4px 16px;
+            border: 3px solid #0b2b5c;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* STATUS */
+        .vote-status {
+            background: #ffffff;
+            border: 3px solid #0b2b5c;
+            padding: 0.9rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 1.8rem;
+            box-shadow: 6px 6px 0 #0b2b5c;
+        }
+
+        .vote-status .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 6px 0;
+        }
+
+        .vote-status .badge i { font-size: 1.1rem; }
+        .vote-status .badge.success i { color: #10b981; }
+        .vote-status .badge.warning i { color: #f59e0b; }
+        .vote-status .badge.danger i { color: #ef4444; }
+
+        .btn-reset {
+            background: #ffffff;
+            border: 3px solid #0b2b5c;
+            padding: 0.55rem 1.4rem;
+            font-weight: 700;
+            font-size: 0.83rem;
+            color: #0b2b5c;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-reset:hover {
+            background: #0b2b5c;
+            color: #ffffff;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 #60a5fa;
+        }
+
+        /* GRID */
+        .voting-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (max-width: 1000px) {
+            .voting-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 680px) {
+            .voting-grid { grid-template-columns: 1fr; }
+        }
+
+        /* CARD */
+        .category-card {
+            background: #ffffff;
+            border: 3px solid #0b2b5c;
+            box-shadow: 8px 8px 0 #0b2b5c;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: opacity 0.3s;
+        }
+
+        .category-card.locked {
+            opacity: 0.65;
+            pointer-events: none;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 1rem 1.2rem;
+            background: #0b2b5c;
+            color: #ffffff;
+            border-bottom: 4px solid #60a5fa;
+        }
+
+        .category-header i {
+            font-size: 1.5rem;
+            color: #60a5fa;
+        }
+
+        .category-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .category-header .count-badge {
+            margin-left: auto;
+            background: #ffffff;
+            color: #0b2b5c;
+            font-size: 0.7rem;
+            padding: 5px 10px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            border: 2px solid #60a5fa;
+            text-transform: uppercase;
+        }
+
+        .candidate-list {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .candidate-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #ffffff;
+            padding: 0.9rem 1rem;
+            border: 3px solid #cbd5e1;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .candidate-item:last-child { margin-bottom: 0; }
+
+        .candidate-item:hover {
+            border-color: #0b2b5c;
+            background: #f8fafc;
+            transform: perspective(800px) rotateX(-4deg) rotateY(4deg) translateZ(20px);
+            box-shadow: 8px 8px 0 #0b2b5c, -4px -4px 20px rgba(96, 165, 250, 0.3);
+        }
+
+        .candidate-item.selected {
+            border-color: #2563eb;
+            background: #dbeafe;
+            box-shadow: 6px 6px 0 #2563eb, inset 0 0 20px rgba(37, 99, 235, 0.1);
+        }
+
+        .candidate-item::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.2), transparent);
+            transition: left 0.5s ease;
+            pointer-events: none;
+        }
+
+        .candidate-item:hover::after { left: 100%; }
+
+        .candidate-avatar {
+            width: 48px;
+            height: 48px;
+            background: #0b2b5c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            flex-shrink: 0;
+            border: 3px solid #60a5fa;
+            transition: all 0.3s ease;
+            transform: translateZ(10px);
+            box-shadow: 3px 3px 0 rgba(11, 43, 92, 0.3);
+        }
+
+        .candidate-item:hover .candidate-avatar {
+            transform: translateZ(30px) rotateY(-10deg);
+            box-shadow: 6px 6px 0 rgba(11, 43, 92, 0.4);
+        }
+
+        .candidate-item.selected .candidate-avatar {
+            background: #2563eb;
+            border-color: #0b2b5c;
+        }
+
+        .candidate-info { flex: 1; transform: translateZ(5px); transition: transform 0.3s ease; }
+        .candidate-item:hover .candidate-info { transform: translateZ(15px); }
+
+        .candidate-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0b1e3a;
+            display: inline-block;
+            transform-origin: left center;
+            animation: floatName3D 3s ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+            text-shadow: 
+                0 1px 0 rgba(96, 165, 250, 0.3),
+                0 2px 0 rgba(96, 165, 250, 0.2),
+                0 3px 0 rgba(96, 165, 250, 0.1);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        @keyframes floatName3D {
+            0% {
+                transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) scale(1);
+                text-shadow: 0 1px 0 rgba(96, 165, 250, 0.3), 0 2px 0 rgba(96, 165, 250, 0.2), 0 3px 0 rgba(96, 165, 250, 0.1);
+            }
+            25% {
+                transform: translateY(-3px) translateZ(8px) rotateX(6deg) rotateY(-3deg) scale(1.02);
+                text-shadow: 0 3px 4px rgba(37, 99, 235, 0.4), 0 6px 8px rgba(37, 99, 235, 0.2), 0 9px 12px rgba(37, 99, 235, 0.1);
+            }
+            50% {
+                transform: translateY(0) translateZ(12px) rotateX(0deg) rotateY(3deg) scale(1.03);
+                text-shadow: 0 4px 6px rgba(37, 99, 235, 0.5), 0 8px 12px rgba(37, 99, 235, 0.25), 0 12px 18px rgba(37, 99, 235, 0.1);
+            }
+            75% {
+                transform: translateY(-2px) translateZ(8px) rotateX(-4deg) rotateY(0deg) scale(1.02);
+                text-shadow: 0 3px 5px rgba(37, 99, 235, 0.4), 0 6px 10px rgba(37, 99, 235, 0.2), 0 9px 15px rgba(37, 99, 235, 0.1);
+            }
+            100% {
+                transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) scale(1);
+                text-shadow: 0 1px 0 rgba(96, 165, 250, 0.3), 0 2px 0 rgba(96, 165, 250, 0.2), 0 3px 0 rgba(96, 165, 250, 0.1);
+            }
+        }
+
+        .candidate-item:hover .candidate-name { color: #2563eb; animation-duration: 1.5s; }
+        .candidate-item.selected .candidate-name { color: #1e40af; font-weight: 800; }
+
+        .candidate-role {
+            font-size: 0.7rem;
+            color: #64748b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 2px;
+        }
+
+        .vote-check {
+            width: 26px;
+            height: 26px;
+            border: 3px solid #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            transform: translateZ(10px);
+        }
+
+        .candidate-item:hover .vote-check { transform: translateZ(25px) rotateY(15deg); }
+        .candidate-item.selected .vote-check { background: #2563eb; border-color: #2563eb; }
+
+        .vote-check i { color: white; font-size: 0.75rem; opacity: 0; transition: opacity 0.15s; }
+        .candidate-item.selected .vote-check i { opacity: 1; }
+
+        /* TOMBOL SUBMIT */
+        .action-section {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-submit {
+            background: #0b2b5c;
+            border: 4px solid #0b2b5c;
+            padding: 1.1rem 3.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+            transition: all 0.15s;
+            box-shadow: 8px 8px 0 #60a5fa;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover:not(:disabled) {
+            background: #25D366;
+            border-color: #128C7E;
+            transform: translate(-3px, -3px);
+            box-shadow: 11px 11px 0 #128C7E;
+        }
+
+        .btn-submit:active:not(:disabled) { transform: translate(0, 0); box-shadow: 4px 4px 0 #128C7E; }
+
+        .btn-submit:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            filter: grayscale(0.5);
+            background: #475569;
+            border-color: #475569;
+            box-shadow: 4px 4px 0 #94a3b8;
+        }
+
+        .btn-submit i { font-size: 1.2rem; }
+
+        /* HASIL */
+        .hasil-section {
+            margin-top: 3rem;
+            width: 100%;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, max-height 0.6s ease, margin-top 0.4s ease;
+        }
+
+        .hasil-section.show { opacity: 1; max-height: 1500px; margin-top: 3rem; }
+
+        .hasil-card {
+            background: #ffffff;
+            border: 4px solid #0b2b5c;
+            padding: 2.5rem 2rem;
+            box-shadow: 10px 10px 0 #0b2b5c;
+            position: relative;
+        }
+
+        .hasil-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(45deg, #0b2b5c, #0b2b5c 10px, #60a5fa 10px, #60a5fa 20px);
+        }
+
+        .hasil-header { text-align: center; margin-bottom: 2.5rem; padding-top: 1rem; }
+
+        .hasil-header .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: #0b2b5c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            border: 4px solid #60a5fa;
+            box-shadow: 6px 6px 0 #60a5fa;
+        }
+
+        .hasil-header .icon-circle i { font-size: 2.5rem; color: #fbbf24; }
+
+        .hasil-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0b1e3a;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hasil-header p { color: #475569; font-size: 0.95rem; font-weight: 500; }
+
+        .hasil-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 850px) { .hasil-grid { grid-template-columns: 1fr; } }
+
+        .hasil-item {
+            background: #ffffff;
+            border: 3px solid #0b2b5c;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            box-shadow: 6px 6px 0 #0b2b5c;
+        }
+
+        .hasil-item .role-icon {
+            width: 60px;
+            height: 60px;
+            background: #0b2b5c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            border: 3px solid #60a5fa;
+        }
+
+        .hasil-item .role-icon i { font-size: 1.8rem; color: #60a5fa; }
+
+        .hasil-item .role-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #64748b;
+            margin-bottom: 0.6rem;
+        }
+
+        .hasil-item .winner-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0b2b5c;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .hasil-item .winner-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #10b981;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 6px 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 2px solid #065f46;
+        }
+
+        .hasil-footer {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 3px dashed #0b2b5c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .hasil-footer .info-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2563eb;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: #dbeafe;
+            padding: 10px 20px;
+            border: 3px solid #2563eb;
+        }
+
+        .hasil-footer .info-text i { color: #2563eb; }
+
+        .hasil-footer .timestamp {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 600;
+            font-family: monospace;
+            background: #f1f5f9;
+            padding: 6px 14px;
+            border: 2px solid #cbd5e1;
+        }
+
+        /* LOCKED OVERLAY */
+        .locked-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(11, 43, 92, 0.85);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s, visibility 0.4s;
+        }
+
+        .locked-overlay.active { opacity: 1; visibility: visible; }
+
+        .locked-card {
+            background: #ffffff;
+            max-width: 520px;
+            width: 100%;
+            padding: 2.5rem 2rem;
+            border: 5px solid #0b2b5c;
+            box-shadow: 12px 12px 0 #ef4444;
+            text-align: center;
+            position: relative;
+        }
+
+        .locked-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 8px;
+            background: repeating-linear-gradient(45deg, #ef4444, #ef4444 10px, #fbbf24 10px, #fbbf24 20px);
+        }
+
+        .locked-card .lock-icon {
+            width: 90px;
+            height: 90px;
+            background: #fef2f2;
+            border: 4px solid #ef4444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 6px 6px 0 #ef4444;
+        }
+
+        .locked-card .lock-icon i {
+            font-size: 3rem;
+            color: #ef4444;
+            animation: lockShake 2s ease-in-out infinite;
+        }
+
+        @keyframes lockShake {
+            0%, 100% { transform: rotate(0); }
+            25% { transform: rotate(-8deg); }
+            75% { transform: rotate(8deg); }
+        }
+
+        .locked-card h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0b1e3a;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .locked-card p {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .locked-card .already-voted-info {
+            background: #f1f5f9;
+            border: 3px solid #0b2b5c;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .locked-card .already-voted-info .av-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #64748b;
+            margin-bottom: 0.6rem;
+        }
+
+        .locked-card .already-voted-info .av-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        .locked-card .already-voted-info .av-row:last-child { border-bottom: none; }
+
+        .locked-card .already-voted-info .av-row .av-role {
+            font-weight: 700;
+            color: #0b2b5c;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .locked-card .already-voted-info .av-row .av-role i { color: #2563eb; }
+
+        .locked-card .already-voted-info .av-row .av-name {
+            font-weight: 800;
+            color: #0b2b5c;
+            font-size: 0.9rem;
+        }
+
+        .locked-card .already-voted-info .av-time {
+            margin-top: 0.8rem;
+            font-size: 0.75rem;
+            color: #64748b;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        .locked-card .btn-locked-close {
+            background: #0b2b5c;
+            border: 4px solid #0b2b5c;
+            padding: 1rem 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            box-shadow: 5px 5px 0 #60a5fa;
+        }
+
+        .locked-card .btn-locked-close:hover {
+            background: #1e40af;
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0 #60a5fa;
+        }
+
+        .locked-card .locked-sub {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #0b2b5c;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 1rem;
+            border-top: 3px solid #0b2b5c;
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(150px);
+            background: #0b2b5c;
+            color: white;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            box-shadow: 6px 6px 0 #60a5fa;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            pointer-events: none;
+            opacity: 0;
+            max-width: 90vw;
+            border: 3px solid #60a5fa;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+        .toast i { color: #fbbf24; font-size: 1.2rem; flex-shrink: 0; }
+        .toast.success i { color: #10b981; }
+        .toast.warning i { color: #f59e0b; }
+        .toast.danger i { color: #ef4444; }
+
+        /* MODAL (untuk kompatibilitas, tidak dipakai lagi) */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(11, 43, 92, 0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+
+        .modal-card {
+            background: #ffffff;
+            max-width: 550px;
+            width: 100%;
+            padding: 2rem;
+            border: 4px solid #0b2b5c;
+            box-shadow: 12px 12px 0 #60a5fa;
+            transform: scale(0.92);
+            transition: transform 0.2s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+        }
+
+        .modal-overlay.active .modal-card { transform: scale(1); }
+
+        .modal-header { text-align: center; margin-bottom: 1.8rem; }
+        .modal-header i { font-size: 3.5rem; color: #25D366; margin-bottom: 0.5rem; }
+
+        .modal-header h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0b1e3a;
+            text-transform: uppercase;
+        }
+
+        .modal-header p { color: #475569; font-size: 0.95rem; }
+
+        .result-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .result-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8fafc;
+            padding: 1rem 1.2rem;
+            border: 3px solid #0b2b5c;
+            border-left: 10px solid #2563eb;
+        }
+
+        .result-item .label {
+            font-weight: 700;
+            color: #0b2b5c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+        }
+
+        .result-item .label i { color: #2563eb; width: 20px; }
+
+        .result-item .winner-name {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #ffffff;
+            background: #0b2b5c;
+            padding: 0.4rem 1rem;
+            text-transform: uppercase;
+        }
+
+        .modal-actions { display: flex; gap: 10px; flex-direction: column; }
+
+        .btn-close-modal {
+            width: 100%;
+            background: #0b2b5c;
+            border: 3px solid #0b2b5c;
+            padding: 1rem;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            box-shadow: 5px 5px 0 #60a5fa;
+        }
+
+        .btn-close-modal:hover { background: #1e40af; transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #60a5fa; }
+
+        .btn-vote-again-modal {
+            width: 100%;
+            background: #f59e0b;
+            border: 3px solid #0b2b5c;
+            padding: 1rem;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #0b2b5c;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            box-shadow: 5px 5px 0 #0b2b5c;
+        }
+
+        .btn-vote-again-modal:hover { background: #fbbf24; transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #0b2b5c; }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <!-- Header -->
+    <div class="header">
+        <h1>
+            <i class="fas fa-vote-yea"></i> Pemilihan IPEMSI Baru 2026
+        </h1>
+        <div class="sub">
+            <i class="fas fa-users"></i> Pilih Ketua, Sekretaris & Bendahara
+        </div>
+    </div>
+
+    <!-- Steps Box -->
+    <div class="steps-box">
+        <div class="steps-label">
+            <i class="fas fa-list-check"></i>
+            <span>Langkah<br>Voting</span>
+        </div>
+        <div class="steps-list">
+            <div class="step-mini" data-step="1">
+                <div class="num">1</div>
+                <div class="txt"><strong>Pilih</strong> kandidat Ketua, Sekretaris &amp; Bendahara</div>
+            </div>
+            <div class="step-mini" data-step="2">
+                <div class="num">2</div>
+                <div class="txt"><strong>Cek</strong> semua sudah tercentang biru</div>
+            </div>
+            <div class="step-mini" data-step="3">
+                <div class="num">3</div>
+                <div class="txt"><strong>Klik</strong> tombol "Kirim Suara via WhatsApp"</div>
+            </div>
+            <div class="step-mini whatsapp-step" data-step="4">
+                <div class="num">4</div>
+                <div class="txt"><strong>WhatsApp</strong> terbuka otomatis ke 3 nomor</div>
+            </div>
+            <div class="step-mini whatsapp-step" data-step="5">
+                <div class="num">5</div>
+                <div class="txt"><strong>Tekan</strong> Send di WhatsApp ✓</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info WA -->
+    <div class="wa-info-box">
+        <i class="fab fa-whatsapp"></i>
+        <div class="wa-content">
+            <div class="wa-title">Hasil voting akan otomatis dikirim ke WhatsApp:</div>
+            <div class="wa-numbers">
+                <div class="wa-number">
+                    <i class="fas fa-user"></i>Kabul Sakukut
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Counter Voting -->
+    <div class="counter-box">
+        <div class="counter-left">
+            <i class="fas fa-chart-simple"></i>
+            <div class="counter-text">Total Voting Dikirim</div>
+        </div>
+        <div class="counter-number" id="counterNumber">0</div>
+    </div>
+
+    <!-- Status Voting -->
+    <div class="vote-status" id="voteStatusBar">
+        <div class="badge warning" id="statusBadge">
+            <i class="fas fa-circle-exclamation"></i>
+            <span id="statusText">Silakan pilih semua kandidat</span>
+        </div>
+        <button class="btn-reset" id="resetVoteBtn">
+            <i class="fas fa-rotate-left"></i> Reset Pilihan
+        </button>
+    </div>
+
+    <!-- Grid Voting -->
+    <div class="voting-grid" id="votingGrid">
+        <div class="category-card" data-category="ketua">
+            <div class="category-header">
+                <i class="fas fa-user-tie"></i>
+                <h2>Ketua</h2>
+                <span class="count-badge">4 Calon</span>
+            </div>
+            <div class="candidate-list" id="ketuaList"></div>
+        </div>
+
+        <div class="category-card" data-category="sekretaris">
+            <div class="category-header">
+                <i class="fas fa-pen-fancy"></i>
+                <h2>Sekretaris</h2>
+                <span class="count-badge">4 Calon</span>
+            </div>
+            <div class="candidate-list" id="sekretarisList"></div>
+        </div>
+
+        <div class="category-card" data-category="bendahara">
+            <div class="category-header">
+                <i class="fas fa-coins"></i>
+                <h2>Bendahara</h2>
+                <span class="count-badge">4 Calon</span>
+            </div>
+            <div class="candidate-list" id="bendaharaList"></div>
+        </div>
+    </div>
+
+    <!-- Tombol Submit -->
+    <div class="action-section" id="actionSection">
+        <button class="btn-submit" id="submitVoteBtn" disabled>
+            <i class="fab fa-whatsapp"></i> Kirim Suara via WhatsApp
+        </button>
+    </div>
+
+    <!-- Hasil Voting -->
+    <div class="hasil-section" id="hasilSection">
+        <div class="hasil-card">
+            <div class="hasil-header">
+                <div class="icon-circle">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2>Hasil Voting Anda</h2>
+                <p>Berikut adalah kandidat yang Anda pilih untuk periode IPEMSI Baru 2026</p>
+            </div>
+
+            <div class="hasil-grid" id="hasilGrid"></div>
+
+            <div class="hasil-footer">
+                <div class="info-text">
+                    <i class="fas fa-lock"></i>
+                    <span>Voting hanya dapat dilakukan SEKALI</span>
+                </div>
+                <div class="timestamp" id="hasilTimestamp"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <i class="fas fa-vote-yea"></i> IPEMSI Baru 2026 • Sistem E-Voting
+    </div>
+</div>
+
+<!-- Locked Overlay -->
+<div class="locked-overlay" id="lockedOverlay">
+    <div class="locked-card">
+        <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        <h2>Anda Sudah Voting</h2>
+        <p>Maaf, Anda hanya dapat melakukan voting <strong>sekali saja</strong>. Suara Anda sudah tersimpan dan tidak dapat diubah.</p>
+        
+        <div class="already-voted-info" id="alreadyVotedInfo">
+            <div class="av-label"><i class="fas fa-check-circle"></i> Pilihan Anda Sebelumnya:</div>
+            <div id="alreadyVotedList"></div>
+            <div class="av-time" id="alreadyVotedTime"></div>
+        </div>
+
+        <button class="btn-locked-close" id="closeLockedBtn">
+            <i class="fas fa-times"></i> Tutup
+        </button>
+        <div class="locked-sub">Terima kasih telah berpartisipasi dalam pemilihan IPEMSI Baru 2026</div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+    <i class="fas fa-info-circle"></i>
+    <span id="toastMessage">Pesan</span>
+</div>
+
+<script>
+    (function() {
+        // ============================================================
+        // KONFIGURASI NOMOR WA
+        // ============================================================
+        const NOMOR_WA_LIST = [
+            { nomor: '6282172769636', nama: 'Kabul Sakukut' }
+        ];
+
+        // ========== DATA CALON ==========
+        const candidates = {
+            ketua: [
+                { id: 'ketua1', name: 'Erutd M Thalif', role: 'Calon Ketua' },
+                { id: 'ketua2', name: 'Iqbal Sakoipia', role: 'Calon Ketua' },
+                { id: 'ketua3', name: 'Kabul Sakukut', role: 'Calon Ketua' },
+                { id: 'ketua4', name: 'Ega Saguntung', role: 'Calon Ketua' }
+            ],
+            sekretaris: [
+                { id: 'sek1', name: 'Tiara', role: 'Calon Sekretaris' },
+                { id: 'sek2', name: 'Riska', role: 'Calon Sekretaris' },
+                { id: 'sek3', name: 'Gerda', role: 'Calon Sekretaris' },
+                { id: 'sek4', name: 'Anggun', role: 'Calon Sekretaris' }
+            ],
+            bendahara: [
+                { id: 'ben1', name: 'Merlin', role: 'Calon Bendahara' },
+                { id: 'ben2', name: 'Asri', role: 'Calon Bendahara' },
+                { id: 'ben3', name: 'Dina', role: 'Calon Bendahara' },
+                { id: 'ben4', name: 'Puput', role: 'Calon Bendahara' }
+            ]
+        };
+
+        let selectedVotes = {
+            ketua: null,
+            sekretaris: null,
+            bendahara: null
+        };
+
+        // ========== STORAGE KEYS ==========
+        const COUNTER_KEY = 'ipemsi_voting_counter_2026';
+        const HAS_VOTED_KEY = 'ipemsi_has_voted_2026';
+        const VOTE_DATA_KEY = 'ipemsi_vote_data_2026';
+
+        // ========== DOM ==========
+        const ketuaList = document.getElementById('ketuaList');
+        const sekretarisList = document.getElementById('sekretarisList');
+        const bendaharaList = document.getElementById('bendaharaList');
+        const submitBtn = document.getElementById('submitVoteBtn');
+        const resetBtn = document.getElementById('resetVoteBtn');
+        const statusBadge = document.getElementById('statusBadge');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        const hasilSection = document.getElementById('hasilSection');
+        const hasilGrid = document.getElementById('hasilGrid');
+        const hasilTimestamp = document.getElementById('hasilTimestamp');
+        const counterNumber = document.getElementById('counterNumber');
+        const votingGrid = document.getElementById('votingGrid');
+        const actionSection = document.getElementById('actionSection');
+        const voteStatusBar = document.getElementById('voteStatusBar');
+        const lockedOverlay = document.getElementById('lockedOverlay');
+        const closeLockedBtn = document.getElementById('closeLockedBtn');
+        const alreadyVotedList = document.getElementById('alreadyVotedList');
+        const alreadyVotedTime = document.getElementById('alreadyVotedTime');
+
+        // ========== CEK STATUS VOTING ==========
+        function hasVoted() {
+            try {
+                return localStorage.getItem(HAS_VOTED_KEY) === 'true';
+            } catch (e) { return false; }
+        }
+
+        function getVoteData() {
+            try {
+                const data = localStorage.getItem(VOTE_DATA_KEY);
+                return data ? JSON.parse(data) : null;
+            } catch (e) { return null; }
+        }
+
+        function saveVoteData(data) {
+            try {
+                localStorage.setItem(VOTE_DATA_KEY, JSON.stringify(data));
+            } catch (e) {}
+        }
+
+        function markAsVoted() {
+            try {
+                localStorage.setItem(HAS_VOTED_KEY, 'true');
+            } catch (e) {}
+        }
+
+        // ========== COUNTER ==========
+        function getCounter() {
+            try {
+                const val = localStorage.getItem(COUNTER_KEY);
+                return val ? parseInt(val, 10) : 0;
+            } catch (e) { return 0; }
+        }
+
+        function incrementCounter() {
+            const current = getCounter();
+            const next = current + 1;
+            try { localStorage.setItem(COUNTER_KEY, next.toString()); } catch (e) {}
+            counterNumber.textContent = next;
+            return next;
+        }
+
+        function updateCounterDisplay() {
+            counterNumber.textContent = getCounter();
+        }
+
+        // ========== RENDER KANDIDAT ==========
+        function renderCandidates() {
+            renderCategory('ketua', ketuaList, 0);
+            renderCategory('sekretaris', sekretarisList, 4);
+            renderCategory('bendahara', bendaharaList, 8);
+        }
+
+        function renderCategory(category, container, delayOffset) {
+            const list = candidates[category];
+            container.innerHTML = '';
+            list.forEach((candidate, index) => {
+                const item = document.createElement('div');
+                item.className = 'candidate-item';
+                item.dataset.id = candidate.id;
+                item.dataset.category = category;
+                const initials = candidate.name.split(' ').map(n => n[0]).join('').substring(0,2).toUpperCase();
+                const delay = ((delayOffset + index) * 0.25).toFixed(2);
+                item.innerHTML = `
+                    <div class="candidate-avatar">${initials}</div>
+                    <div class="candidate-info">
+                        <div class="candidate-name" style="--delay: ${delay}s">${candidate.name}</div>
+                        <div class="candidate-role">${candidate.role}</div>
+                    </div>
+                    <div class="vote-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                `;
+                item.addEventListener('click', () => handleCandidateClick(category, candidate.id));
+                container.appendChild(item);
+            });
+        }
+
+        function handleCandidateClick(category, candidateId) {
+            if (hasVoted()) {
+                showLockedOverlay();
+                return;
+            }
+            if (selectedVotes[category] === candidateId) {
+                selectedVotes[category] = null;
+            } else {
+                selectedVotes[category] = candidateId;
+            }
+            updateSelectionUI(category);
+            updateSubmitButtonState();
+            updateStatusBadge();
+        }
+
+        function updateSelectionUI(category) {
+            const container = document.querySelector(`.category-card[data-category="${category}"] .candidate-list`);
+            const items = container.querySelectorAll('.candidate-item');
+            const selectedId = selectedVotes[category];
+            items.forEach(item => {
+                if (item.dataset.id === selectedId) {
+                    item.classList.add('selected');
+                } else {
+                    item.classList.remove('selected');
+                }
+            });
+        }
+
+        function updateSubmitButtonState() {
+            if (hasVoted()) {
+                submitBtn.disabled = true;
+                return;
+            }
+            const allSelected = selectedVotes.ketua && selectedVotes.sekretaris && selectedVotes.bendahara;
+            submitBtn.disabled = !allSelected;
+        }
+
+        function updateStatusBadge() {
+            if (hasVoted()) {
+                statusBadge.className = 'badge danger';
+                statusBadge.innerHTML = '<i class="fas fa-lock"></i><span id="statusText">Anda sudah voting. Tidak dapat voting lagi.</span>';
+                return;
+            }
+            const allSelected = selectedVotes.ketua && selectedVotes.sekretaris && selectedVotes.bendahara;
+            if (allSelected) {
+                statusBadge.className = 'badge success';
+                statusBadge.innerHTML = '<i class="fas fa-check-circle"></i><span id="statusText">Semua kandidat telah dipilih. Klik "Kirim Suara".</span>';
+            } else {
+                statusBadge.className = 'badge warning';
+                statusBadge.innerHTML = '<i class="fas fa-circle-exclamation"></i><span id="statusText">Silakan pilih semua kandidat (Ketua, Sekretaris, Bendahara)</span>';
+            }
+        }
+
+        function getWinnerName(category, id) {
+            const candidate = candidates[category].find(c => c.id === id);
+            return candidate ? candidate.name : '-';
+        }
+
+        // ========== RENDER HASIL DARI DATA TERSIMPAN ==========
+        function renderHasilFromData(voteData) {
+            if (!voteData) return;
+
+            const ketuaName = getWinnerName('ketua', voteData.ketua);
+            const sekretarisName = getWinnerName('sekretaris', voteData.sekretaris);
+            const bendaharaName = getWinnerName('bendahara', voteData.bendahara);
+
+            hasilGrid.innerHTML = `
+                <div class="hasil-item">
+                    <div class="role-icon"><i class="fas fa-user-tie"></i></div>
+                    <div class="role-label">Ketua</div>
+                    <div class="winner-name">${ketuaName}</div>
+                    <div class="winner-badge"><i class="fas fa-check"></i> Terpilih</div>
+                </div>
+                <div class="hasil-item">
+                    <div class="role-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <div class="role-label">Sekretaris</div>
+                    <div class="winner-name">${sekretarisName}</div>
+                    <div class="winner-badge"><i class="fas fa-check"></i> Terpilih</div>
+                </div>
+                <div class="hasil-item">
+                    <div class="role-icon"><i class="fas fa-coins"></i></div>
+                    <div class="role-label">Bendahara</div>
+                    <div class="winner-name">${bendaharaName}</div>
+                    <div class="winner-badge"><i class="fas fa-check"></i> Terpilih</div>
+                </div>
+            `;
+
+            hasilTimestamp.textContent = `Dikirim pada: ${voteData.waktu}`;
+            hasilSection.classList.add('show');
+        }
+
+        // ========== KIRIM KE WHATSAPP ==========
+        function kirimKeWhatsApp(voteData) {
+            const ketuaName = getWinnerName('ketua', voteData.ketua);
+            const sekretarisName = getWinnerName('sekretaris', voteData.sekretaris);
+            const bendaharaName = getWinnerName('bendahara', voteData.bendahara);
+
+            const pesan = 
+                '*HASIL VOTING IPEMSI BARU 2026*\n' +
+                '━━━━━━━━━━━━━━━━━━━\n\n' +
+                '*PILIHAN SAYA:*\n\n' +
+                '🔹 *KETUA*\n' +
+                '   ➜ ' + ketuaName + '\n\n' +
+                '🔹 *SEKRETARIS*\n' +
+                '   ➜ ' + sekretarisName + '\n\n' +
+                '🔹 *BENDAHARA*\n' +
+                '   ➜ ' + bendaharaName + '\n\n' +
+                '━━━━━━━━━━━━━━━━━━━\n' +
+                '⏰ Waktu: ' + voteData.waktu + ' WIB\n' +
+                '📱 Dikirim otomatis melalui sistem e-voting IPEMSI Baru 2026\n\n' +
+                '_Pesan ini dikirim otomatis dari web voting. Mohon tidak membalas._';
+
+            const pesanEncoded = encodeURIComponent(pesan);
+
+            NOMOR_WA_LIST.forEach((target, index) => {
+                const waLink = 'https://api.whatsapp.com/send?phone=' + target.nomor + '&text=' + pesanEncoded;
+                
+                setTimeout(() => {
+                    try {
+                        if (index === 0) {
+                            const newWindow = window.open(waLink, '_blank', 'noopener,noreferrer');
+                            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                                window.location.href = waLink;
+                            }
+                        } else {
+                            window.open(waLink, '_blank', 'noopener,noreferrer');
+                        }
+                    } catch (e) {
+                        console.error('Error membuka WhatsApp ke ' + target.nomor + ':', e);
+                    }
+                }, index * 1200);
+            });
+        }
+
+        // ========== SUBMIT VOTE ==========
+        function submitVote() {
+            if (hasVoted()) {
+                showLockedOverlay();
+                showToast('Anda sudah voting. Tidak dapat voting lagi.', 'danger');
+                return;
+            }
+
+            if (!selectedVotes.ketua || !selectedVotes.sekretaris || !selectedVotes.bendahara) {
+                showToast('Harap pilih semua kandidat terlebih dahulu.', 'warning');
+                return;
+            }
+
+            const now = new Date();
+            const waktuStr = now.toLocaleString('id-ID', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+
+            const voteData = {
+                ketua: selectedVotes.ketua,
+                sekretaris: selectedVotes.sekretaris,
+                bendahara: selectedVotes.bendahara,
+                waktu: waktuStr,
+                timestamp: now.getTime()
+            };
+
+            // Simpan data voting
+            saveVoteData(voteData);
+            markAsVoted();
+
+            const total = incrementCounter();
+
+            // Kirim ke WhatsApp
+            kirimKeWhatsApp(voteData);
+
+            // Tampilkan hasil
+            renderHasilFromData(voteData);
+
+            // Kunci seluruh UI
+            lockUI();
+
+            // Tampilkan toast
+            showToast('Suara berhasil dikirim! Voting terkunci. Total voting ke-' + total + '.', 'success');
+
+            // Scroll ke hasil
+            setTimeout(() => {
+                hasilSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 400);
+        }
+
+        // ========== KUNCI UI ==========
+        function lockUI() {
+            // Nonaktifkan semua kartu
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.classList.add('locked');
+            });
+
+            // Nonaktifkan tombol submit
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-lock"></i> Voting Terkunci';
+
+            // Sembunyikan tombol reset
+            resetBtn.style.display = 'none';
+
+            // Update status
+            updateStatusBadge();
+        }
+
+        // ========== LOCKED OVERLAY ==========
+        function showLockedOverlay() {
+            const voteData = getVoteData();
+            if (voteData) {
+                const ketuaName = getWinnerName('ketua', voteData.ketua);
+                const sekretarisName = getWinnerName('sekretaris', voteData.sekretaris);
+                const bendaharaName = getWinnerName('bendahara', voteData.bendahara);
+
+                alreadyVotedList.innerHTML = `
+                    <div class="av-row">
+                        <span class="av-role"><i class="fas fa-user-tie"></i> Ketua</span>
+                        <span class="av-name">${ketuaName}</span>
+                    </div>
+                    <div class="av-row">
+                        <span class="av-role"><i class="fas fa-pen-fancy"></i> Sekretaris</span>
+                        <span class="av-name">${sekretarisName}</span>
+                    </div>
+                    <div class="av-row">
+                        <span class="av-role"><i class="fas fa-coins"></i> Bendahara</span>
+                        <span class="av-name">${bendaharaName}</span>
+                    </div>
+                `;
+                alreadyVotedTime.textContent = `Waktu voting: ${voteData.waktu} WIB`;
+            } else {
+                alreadyVotedList.innerHTML = '<div style="text-align:center;color:#64748b;font-size:0.85rem;">Data voting tidak ditemukan.</div>';
+                alreadyVotedTime.textContent = '';
+            }
+            lockedOverlay.classList.add('active');
+        }
+
+        closeLockedBtn.addEventListener('click', () => {
+            lockedOverlay.classList.remove('active');
+        });
+
+        lockedOverlay.addEventListener('click', (e) => {
+            if (e.target === lockedOverlay) lockedOverlay.classList.remove('active');
+        });
+
+        // ========== RESET (hanya jika belum voting) ==========
+        function resetVote() {
+            if (hasVoted()) {
+                showLockedOverlay();
+                showToast('Tidak dapat reset. Anda sudah voting.', 'danger');
+                return;
+            }
+            selectedVotes = { ketua: null, sekretaris: null, bendahara: null };
+            document.querySelectorAll('.candidate-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            updateSubmitButtonState();
+            updateStatusBadge();
+            showToast('Pilihan telah direset. Silakan voting ulang.', 'info');
+        }
+
+        // ========== TOAST ==========
+        let toastTimeout;
+        function showToast(message, type = 'info') {
+            clearTimeout(toastTimeout);
+            toastMessage.textContent = message;
+            toast.className = `toast ${type}`;
+            const icon = toast.querySelector('i');
+            if (type === 'success') icon.className = 'fas fa-check-circle';
+            else if (type === 'warning') icon.className = 'fas fa-exclamation-triangle';
+            else if (type === 'danger') icon.className = 'fas fa-lock';
+            else icon.className = 'fas fa-info-circle';
+            
+            toast.classList.add('show');
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        // ========== EVENT LISTENERS ==========
+        submitBtn.addEventListener('click', submitVote);
+        resetBtn.addEventListener('click', resetVote);
+
+        // ========== INIT ==========
+        function init() {
+            renderCandidates();
+            updateCounterDisplay();
+
+            if (hasVoted()) {
+                // Jika sudah voting: kunci UI dan tampilkan hasil
+                const voteData = getVoteData();
+                if (voteData) {
+                    // Set selectedVotes agar konsisten
+                    selectedVotes = {
+                        ketua: voteData.ketua,
+                        sekretaris: voteData.sekretaris,
+                        bendahara: voteData.bendahara
+                    };
+
+                    // Tandai kandidat yang dipilih
+                    ['ketua', 'sekretaris', 'bendahara'].forEach(cat => {
+                        updateSelectionUI(cat);
+                    });
+
+                    // Tampilkan hasil
+                    renderHasilFromData(voteData);
+
+                    // Kunci UI
+                    lockUI();
+                }
+            } else {
+                selectedVotes = { ketua: null, sekretaris: null, bendahara: null };
+                updateSubmitButtonState();
+                updateStatusBadge();
+            }
+        }
+
+        init();
+    })();
+</script>
+</body>
+</html>
